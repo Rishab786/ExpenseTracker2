@@ -1,4 +1,10 @@
 const db = require("../utils/db");
+async function validateUser(email, pass) {
+    const result = await db.execute("SELECT * FROM users WHERE emailid = ?", [
+      email,
+    ]);
+    return result;
+  }
 
 async function createUser(name, email, pass) {
     const result = await db.execute("SELECT * FROM `users` WHERE `emailid` = ?", [
@@ -19,4 +25,7 @@ async function createUser(name, email, pass) {
 
 module.exports = {
   registerUser: createUser,
+  userValidation: validateUser,
+  
+
 };
