@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup Page</title>
+	<title>Slide Navbar</title>
+	
+<link rel="stylesheet" href="../css/loginPage.css">
 </head>
 <body>
-    <div>
-        <form action="/signup" method="post">
-            <label >Name
-                <input type="text" name="userName" id="name">
-            </label>
-            <br>
-            <label >Email
-                <input type="text" name="email" id="email">
-            </label>
-            <br>
-            <label >password
-                <input type="password" name="password" id="password">
-            </label>
-            <br>
-            <button type="submit" id="addBtn">Register</button>
-        </form>
-        <script src="index.js"></script>
-    </div>
-   
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form action="http://localhost:3000/signup" method="post">
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="text" name="txt" placeholder="User name" required="" id="name">
+					<input type="email" name="email" placeholder="Email" required="" id="email">
+					<input type="password" name="pswd" placeholder="Password" required="" id="password">
+					<button id="addBtn" type="submit">Sign up</button>
+				</form>
+			</div>
+
+			
+	</div>
+    
 </body>
 </html>
